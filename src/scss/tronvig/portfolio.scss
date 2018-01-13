@@ -1,0 +1,224 @@
+// Portfolio
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Dots
+.dots {
+  background-image:
+    linear-gradient(transparent 0px, transparent 2px, rgb(42, 42, 42) 2px, rgb(42, 42, 42) 20px),
+    linear-gradient(to right, rgb(42, 64, 64) 0px, rgb(42, 64, 64) 2px, rgb(42, 42, 42) 2px, rgb(42, 42, 42) 20px);
+  background-position: -233px -2px;
+  background-size: 20px 20px;
+  min-width: 100%;
+  min-height: 100vh;
+  user-select: none;
+  z-index: -1;
+  position: fixed;
+}
+
+// Intro
+.intro {
+  min-height: 100vh;
+
+  h1 {
+    -webkit-animation: fadeInUp 0.8s ease-out ;
+    animation: fadeInUp 0.8s ease-out ;
+    margin-top: 12.0rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    font-weight: 100;
+    max-width: 450px;
+  }
+}
+
+.case-studies {
+  margin-bottom: 12.0rem;
+
+  &:hover {
+
+    h3 {
+      opacity: 0.5;
+    }
+  }
+}
+
+.study {
+  position: relative;
+  margin-bottom: 4.0rem;
+
+  h3 {
+    transition: opacity 0.8s ease;
+    position: relative;
+    z-index: 11;
+
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+
+    @media (#{$bp-tablet}) {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+
+    h3 {
+      opacity: 1;
+    }
+
+    p {
+      opacity: 1;
+    }
+
+    .screen {
+      opacity: 1;
+
+      &.screen--aa-charts,
+      &.screen--aa-prototype,
+      &.screen--mv-vendors,
+      &.screen--mv-notifications,
+      &.screen--txl-pm,
+      &.screen--txl-design {
+        span {
+          top: -10px;
+        }
+      }
+    }
+  }
+}
+
+.screen {
+  opacity: 0;
+  transition: all 0.8s ease;
+  z-index: -1;
+
+  &.screen--mv,
+  &.screen--txl,
+  &.screen--aa,
+  &.screen--aa-charts,
+  &.screen--aa-prototype,
+  &.screen--mv-vendors,
+  &.screen--mv-notifications,
+  &.screen--txl-pm,
+  &.screen--txl-design,
+  &.screen--ho {
+    span {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      display: block;
+      width: 205px;
+      height: 140px;
+      background: url(../img/study-aa.png) no-repeat center center;
+      background-size: contain;
+      border-radius: 7px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  }
+  // Multiverse
+  &.screen--mv-vendors {
+    span {
+      right: 140px;
+      background: url(../img/study-mv-vendors.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.3s;
+    }
+  }
+  &.screen--mv-notifications {
+    span {
+      background: url(../img/study-mv-notifications.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.4s;
+    }
+  }
+  // Attribution Analytics
+  &.screen--aa-charts {
+    span {
+      right: 140px;
+      background: url(../img/study-aa-charts.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.3s;
+    }
+  }
+  &.screen--aa-prototype {
+    span {
+      background: url(../img/study-aa-prototype.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.4s;
+    }
+  }
+  // TXL
+  &.screen--txl-pm {
+    span {
+      right: 140px;
+      background: url(../img/study-txl-pm.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.3s;
+    }
+  }
+  &.screen--txl-design {
+    span {
+      background: url(../img/study-txl-design.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.4s;
+    }
+  }
+
+  @media (#{$bp-tablet}) {
+    display: none;
+  }
+}
+
+.preload {
+  .intro {
+  }
+}
+
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
