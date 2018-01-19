@@ -206,10 +206,10 @@ body {
   font-weight: 400;
   font-family: "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #fff;
-  background-color: #292B2B; }
+  background-color: #292b2b; }
 
 a {
-  color: #50E3C2; }
+  color: #50e3c2; }
   a:hover {
     color: #3adfba; }
 
@@ -411,7 +411,7 @@ button {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #555555;
+  color: white;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -420,9 +420,8 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: transparent;
-  border-radius: 4px;
-  border: 1px solid #bbb;
+  background-color: #50e3c2;
+  border: 1px solid #50e3c2;
   cursor: pointer;
   box-sizing: border-box; }
 
@@ -447,8 +446,7 @@ input[type="submit"], input[type="reset"], input[type="button"] {
 
 .button:hover,
 button:hover {
-  color: #333;
-  border-color: #888888;
+  background-color: transparent;
   outline: 0; }
 
 input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
@@ -470,35 +468,35 @@ input[type="submit"]:focus, input[type="reset"]:focus, input[type="button"]:focu
 .button.button-primary,
 button.button-primary {
   color: #fff;
-  background-color: #33c3f0;
-  border-color: #33c3f0; }
+  background-color: #50e3c2;
+  border-color: #50e3c2; }
 
 input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
   color: #fff;
-  background-color: #33c3f0;
-  border-color: #33c3f0; }
+  background-color: #50e3c2;
+  border-color: #50e3c2; }
 
 .button.button-primary:hover,
 button.button-primary:hover {
   color: #fff;
-  background-color: #50E3C2;
-  border-color: #50E3C2; }
+  background-color: #50e3c2;
+  border-color: #50e3c2; }
 
 input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover, input[type="button"].button-primary:hover {
   color: #fff;
-  background-color: #50E3C2;
-  border-color: #50E3C2; }
+  background-color: #50e3c2;
+  border-color: #50e3c2; }
 
 .button.button-primary:focus,
 button.button-primary:focus {
   color: #fff;
-  background-color: #50E3C2;
-  border-color: #50E3C2; }
+  background-color: #50e3c2;
+  border-color: #50e3c2; }
 
 input[type="submit"].button-primary:focus, input[type="reset"].button-primary:focus, input[type="button"].button-primary:focus {
   color: #fff;
-  background-color: #50E3C2;
-  border-color: #50E3C2; }
+  background-color: #50e3c2;
+  border-color: #50e3c2; }
 
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
   height: 38px;
@@ -513,7 +511,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   margin-top: 20px;
   display: block;
   color: white;
-  background: #50E3C2;
+  background: #50e3c2;
   padding: 10px 20px;
   width: 120px;
   text-align: center; }
@@ -594,12 +592,12 @@ textarea {
   padding-bottom: 6px; }
 
 input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
-  border: 1px solid #33c3f0;
+  border: 1px solid #50e3c2;
   outline: 0; }
 
 textarea:focus,
 select:focus {
-  border: 1px solid #33c3f0;
+  border: 1px solid #50e3c2;
   outline: 0; }
 
 label,
@@ -692,6 +690,16 @@ form {
   margin-bottom: 2.5rem; }
 
 /* Portfolio */
+.header {
+  height: 42px;
+  padding: 2.0rem 0; }
+  .header .logo span {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background: url(../img/matt-tronvig-logo.svg) no-repeat center center;
+    background-size: contain; }
+
 .dots {
   background-image: linear-gradient(transparent 0px, transparent 2px, #2a2a2a 2px, #2a2a2a 20px), linear-gradient(to right, #2a4040 0px, #2a4040 2px, #2a2a2a 2px, #2a2a2a 20px);
   background-position: -233px -2px;
@@ -709,22 +717,40 @@ form {
   min-height: 100vh; }
   .intro h1 {
     animation: fadeInUp 0.8s ease-out;
-    margin-top: 12.0rem; }
+    margin-top: 18vh; }
   .intro p {
     font-size: 1.8rem;
     font-weight: 100;
     max-width: 450px; }
 
+.feature {
+  display: inline-block;
+  margin-top: 20vh;
+  width: 420px;
+  min-height: 283px;
+  opacity: 1;
+  transition: all 0.8s ease;
+  animation: fadeInUp 0.8s ease-out; }
+  .feature.feature--sketch span {
+    display: inline-block;
+    width: 420px;
+    min-height: 283px;
+    background: url(../img/feature-sketch.svg) no-repeat center center;
+    background-size: contain;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .feature.feature--sketch:hover span {
+    background: url(../img/feature-sketch-hi.svg) no-repeat center center;
+    background-size: contain; }
+
 .case-studies {
   margin-bottom: 12.0rem; }
-  .case-studies:hover h3 {
-    opacity: 0.5; }
 
 .study {
   position: relative;
   margin-bottom: 4.0rem; }
   .study h3 {
-    transition: opacity 0.8s ease;
+    margin-top: 2.0rem;
     position: relative;
     z-index: 11; }
     .study h3 a {
@@ -735,65 +761,85 @@ form {
         color: white;
         text-decoration: none; }
   .study p {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.8s ease; }
+    .study p.category {
+      color: #9b9b9b;
+      font-size: 1.3rem;
+      text-transform: uppercase; }
     @media (max-width: 750px) {
       .study p {
         opacity: 1; } }
-  .study:hover h3 {
-    opacity: 1; }
   .study:hover p {
     opacity: 1; }
   .study:hover .screen {
     opacity: 1; }
-    .study:hover .screen.screen--aa-charts span, .study:hover .screen.screen--aa-prototype span, .study:hover .screen.screen--mv-vendors span, .study:hover .screen.screen--mv-notifications span, .study:hover .screen.screen--txl-pm span, .study:hover .screen.screen--txl-design span {
-      top: -10px; }
+    .study:hover .screen.screen--mv span, .study:hover .screen.screen--txl span, .study:hover .screen.screen--aa span, .study:hover .screen.screen--aa-charts span, .study:hover .screen.screen--aa-prototype span, .study:hover .screen.screen--mv-vendors span, .study:hover .screen.screen--mv-notifications span, .study:hover .screen.screen--txl-pm span, .study:hover .screen.screen--txl-design span, .study:hover .screen.screen--ho-ux span, .study:hover .screen.screen--ho-web span {
+      top: -5px; }
 
 .screen {
-  opacity: 0;
+  display: inline-block;
+  margin-top: 3.0rem;
+  width: 205px;
+  height: 140px;
+  opacity: 1;
   transition: all 0.8s ease;
   z-index: -1; }
-  .screen.screen--mv span, .screen.screen--txl span, .screen.screen--aa span, .screen.screen--aa-charts span, .screen.screen--aa-prototype span, .screen.screen--mv-vendors span, .screen.screen--mv-notifications span, .screen.screen--txl-pm span, .screen.screen--txl-design span, .screen.screen--ho span {
-    position: absolute;
-    right: 0;
-    top: 10px;
-    display: block;
+  .screen.screen--mv span, .screen.screen--txl span, .screen.screen--aa span, .screen.screen--aa-charts span, .screen.screen--aa-prototype span, .screen.screen--mv-vendors span, .screen.screen--mv-notifications span, .screen.screen--txl-pm span, .screen.screen--txl-design span, .screen.screen--ho-ux span, .screen.screen--ho-web span {
+    top: 20px;
+    position: relative;
+    display: inline-block;
     width: 205px;
     height: 140px;
     background: url(../img/study-aa.png) no-repeat center center;
     background-size: contain;
     border-radius: 7px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-  .screen.screen--mv-vendors span {
-    right: 140px;
-    background: url(../img/study-mv-vendors.svg) no-repeat center center;
-    background-size: contain;
-    transition: all 0.5s ease;
-    transition-delay: 0.3s; }
+  .screen.screen--mv-vendors {
+    margin-left: -100px; }
+    .screen.screen--mv-vendors span {
+      background: url(../img/study-mv-vendors.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.3s; }
   .screen.screen--mv-notifications span {
     background: url(../img/study-mv-notifications.svg) no-repeat center center;
     background-size: contain;
     transition: all 0.5s ease;
     transition-delay: 0.4s; }
-  .screen.screen--aa-charts span {
-    right: 140px;
-    background: url(../img/study-aa-charts.svg) no-repeat center center;
-    background-size: contain;
-    transition: all 0.5s ease;
-    transition-delay: 0.3s; }
+  .screen.screen--aa-charts {
+    margin-left: -100px; }
+    .screen.screen--aa-charts span {
+      background: url(../img/study-aa-charts.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.3s; }
   .screen.screen--aa-prototype span {
     background: url(../img/study-aa-prototype.svg) no-repeat center center;
     background-size: contain;
     transition: all 0.5s ease;
     transition-delay: 0.4s; }
-  .screen.screen--txl-pm span {
-    right: 140px;
-    background: url(../img/study-txl-pm.svg) no-repeat center center;
-    background-size: contain;
-    transition: all 0.5s ease;
-    transition-delay: 0.3s; }
+  .screen.screen--txl-pm {
+    margin-left: -100px; }
+    .screen.screen--txl-pm span {
+      background: url(../img/study-txl-pm.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.3s; }
   .screen.screen--txl-design span {
     background: url(../img/study-txl-design.svg) no-repeat center center;
+    background-size: contain;
+    transition: all 0.5s ease;
+    transition-delay: 0.4s; }
+  .screen.screen--ho-web {
+    margin-left: -100px; }
+    .screen.screen--ho-web span {
+      background: url(../img/study-txl-design.svg) no-repeat center center;
+      background-size: contain;
+      transition: all 0.5s ease;
+      transition-delay: 0.3s; }
+  .screen.screen--ho-ux span {
+    background: url(../img/study-txl-pm.svg) no-repeat center center;
     background-size: contain;
     transition: all 0.5s ease;
     transition-delay: 0.4s; }

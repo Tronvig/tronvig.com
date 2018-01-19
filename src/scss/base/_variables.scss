@@ -17,13 +17,14 @@ $bp-desktophd : 'max-width: 1200px' !default;
 
 // Colors
 $light-grey: #e1e1e1 !default;
+$medium-grey: #9b9b9b !default;
 $dark-grey: #333 !default;
-$primary-color: #33c3f0 !default;
+$primary-color: #50e3c2 !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
-$link-color: #50E3C2 !default;
+$link-color: #50e3c2 !default;
 $font-color: #fff !default;
-$background-color: #292B2B !default;
+$background-color: #292b2b !default;
 
 // Typography
 $font-family: 'Source Sans Pro', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif !default;

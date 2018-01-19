@@ -6,7 +6,7 @@ button {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: $secondary-color;
+  color: white;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -15,9 +15,8 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: transparent;
-  border-radius: $global-radius;
-  border: 1px solid $border-color;
+  background-color: $link-color;
+  border: 1px solid $link-color;
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -48,8 +47,9 @@ input {
 
 .button:hover,
 button:hover {
-  color: $dark-grey;
-  border-color: lighten($dark-grey, 33.3%);
+  background-color: transparent;
+  //color: $dark-grey;
+  //border-color: lighten($dark-grey, 33.3%);
   outline: 0;
 }
 
