@@ -95,6 +95,14 @@
       }
     }
   }
+
+  @media (#{$bp-tablet}) {
+    display: none;
+    //position: absolute;
+    //right: 0;
+    //top: 0;
+    //margin-right: -50%;
+  }
 }
 
 .case-studies {
@@ -118,13 +126,28 @@
     z-index: 11;
 
     a {
-      display: block;
-      color: white;
+      color: $link-color;
       text-decoration: none;
-
-      &:hover {
-        color: white;
-        text-decoration: none;
+      //text-transform: uppercase;
+      -webkit-transition: .2s;
+    }
+    a:hover {
+      color: hotpink;
+    }
+    @media (-webkit-min-device-pixel-ratio:0) {
+      a {
+        background-color: #50e3c2;
+        background-image: -webkit-linear-gradient(left, hotpink 0%, orange 50%, transparent 50%);
+        background-position: 100% 0;
+        background-size: 200% 200%;
+        color: transparent;
+        -webkit-transition: .2s .2s;
+        -webkit-background-clip: text;
+      }
+      a:hover {
+        background-position: 0 0;
+        color: transparent;
+        transition: .4s 0;
       }
     }
   }
@@ -179,8 +202,6 @@
 .screen {
   display: inline-block;
   margin-top: 3.0rem;
-  width: 205px;
-  height: 140px;
   opacity: 1;
   transition: all 0.8s ease;
   z-index: -1;
@@ -206,6 +227,16 @@
       background-size: contain;
       border-radius: 7px;
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+      @media (#{$bp-desktop}) {
+        width: 166px;
+        height: 113px;
+      }
+      @media (#{$bp-tablet}) {
+        width: 205px;
+        height: 140px;
+        margin-bottom: 2.0rem;
+      }
     }
   }
   // Multiverse
@@ -286,7 +317,7 @@
   }
 
   @media (#{$bp-tablet}) {
-    display: none;
+    //display: none;
   }
 }
 

@@ -250,9 +250,9 @@ h2 {
   letter-spacing: 0.3rem; }
 
 h3 {
-  font-size: 3.0rem;
+  font-size: 4.2rem;
   line-height: 1.3;
-  letter-spacing: 0.3rem; }
+  letter-spacing: 0.1rem; }
 
 h4 {
   font-size: 2.4rem;
@@ -271,11 +271,11 @@ h6 {
 
 @media (min-width: 550px) {
   h1 {
-    font-size: 5.6rem; }
+    font-size: 6.4rem; }
   h2 {
-    font-size: 4.2rem; }
+    font-size: 5.2rem; }
   h3 {
-    font-size: 3.6rem; }
+    font-size: 4.2rem; }
   h4 {
     font-size: 3.0rem; }
   h5 {
@@ -742,6 +742,9 @@ form {
   .feature.feature--sketch:hover span {
     background: url(../img/feature-sketch-hi.svg) no-repeat center center;
     background-size: contain; }
+  @media (max-width: 750px) {
+    .feature {
+      display: none; } }
 
 .case-studies {
   margin-bottom: 12.0rem; }
@@ -754,12 +757,24 @@ form {
     position: relative;
     z-index: 11; }
     .study h3 a {
-      display: block;
-      color: white;
-      text-decoration: none; }
+      color: #50e3c2;
+      text-decoration: none;
+      -webkit-transition: .2s; }
+    .study h3 a:hover {
+      color: hotpink; }
+    @media (-webkit-min-device-pixel-ratio: 0) {
+      .study h3 a {
+        background-color: #50e3c2;
+        background-image: -webkit-linear-gradient(left, hotpink 0%, orange 50%, transparent 50%);
+        background-position: 100% 0;
+        background-size: 200% 200%;
+        color: transparent;
+        -webkit-transition: .2s .2s;
+        -webkit-background-clip: text; }
       .study h3 a:hover {
-        color: white;
-        text-decoration: none; }
+        background-position: 0 0;
+        color: transparent;
+        transition: .4s 0; } }
   .study p {
     opacity: 1;
     transition: opacity 0.8s ease; }
@@ -780,8 +795,6 @@ form {
 .screen {
   display: inline-block;
   margin-top: 3.0rem;
-  width: 205px;
-  height: 140px;
   opacity: 1;
   transition: all 0.8s ease;
   z-index: -1; }
@@ -795,6 +808,15 @@ form {
     background-size: contain;
     border-radius: 7px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+    @media (max-width: 1200px) {
+      .screen.screen--mv span, .screen.screen--txl span, .screen.screen--aa span, .screen.screen--aa-charts span, .screen.screen--aa-prototype span, .screen.screen--mv-vendors span, .screen.screen--mv-notifications span, .screen.screen--txl-pm span, .screen.screen--txl-design span, .screen.screen--ho-ux span, .screen.screen--ho-web span {
+        width: 166px;
+        height: 113px; } }
+    @media (max-width: 750px) {
+      .screen.screen--mv span, .screen.screen--txl span, .screen.screen--aa span, .screen.screen--aa-charts span, .screen.screen--aa-prototype span, .screen.screen--mv-vendors span, .screen.screen--mv-notifications span, .screen.screen--txl-pm span, .screen.screen--txl-design span, .screen.screen--ho-ux span, .screen.screen--ho-web span {
+        width: 205px;
+        height: 140px;
+        margin-bottom: 2.0rem; } }
   .screen.screen--mv-vendors {
     margin-left: -100px; }
     .screen.screen--mv-vendors span {
@@ -843,9 +865,6 @@ form {
     background-size: contain;
     transition: all 0.5s ease;
     transition-delay: 0.4s; }
-  @media (max-width: 750px) {
-    .screen {
-      display: none; } }
 
 @keyframes fadeInUp {
   from {
